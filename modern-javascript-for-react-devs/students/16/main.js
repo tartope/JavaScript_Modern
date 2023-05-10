@@ -39,7 +39,14 @@ const ex4 = () => {
 const ex5 = () => {
     // TODO...
     let str = "today this is a this is a this is a test.";
-    console.log(numberOfTimes(str));
+    // console.log(numberOfTimes(str));
+}
+
+const ex6 = () => {
+    // TODO...
+    // const array = ['this', 'is', 'a', 'test', 'happy'];
+    const array = ['this', 'is', 'alongstringtoo', 'test', 'happy'];
+    console.log(longestString(array));
 }
 
 //
@@ -100,12 +107,21 @@ const numberOfTimes = str =>{
     return `this appears: ${countArr.length} times.`;
 }
 
+const longestString = str =>{
+    let result = "";
+    for(let s of str){
+        if(s.length > result.length) result = s;
+    }
+    return result;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
     // ex3();
     // ex4();
-    ex5();
+    // ex5();
+    ex6();
 }
 
 main();
