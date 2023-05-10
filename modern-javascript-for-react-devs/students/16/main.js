@@ -19,6 +19,13 @@ const ex2 = () => {
 
 const ex3 = () => {
     // TODO...
+    // const array1 = [1, 2, 3, 4, 5];
+    // const array2 = ['a', 'b', 'c', 'd', 'e'];
+    // const array1 = [1, 2];
+    // const array2 = ['a', 'b', 'c', 'd', 'e'];
+    const array1 = ["Buddy ", "the ", "cat "]
+    const array2 = ["was ", "best ", "ever!"]
+    console.log(interleave(array1, array2));
 }
 
 //
@@ -44,9 +51,25 @@ const minNumber = (array) =>{
     return result
 }
 
+const interleave = (arr1, arr2)=>{
+    //create new empy string to return
+    let result = "";
+    
+    if(arr1.length === arr2.length){
+        for(let i=0; i < arr1.length; i++){
+            result += arr1[i]
+            result += arr2[i]
+        }
+    }else{
+        return "ERROR: Array length mismatch"
+    }
+    return result;
+}
+
 const main = async () => {
     // ex1();
-    ex2();
+    // ex2();
+    ex3();
 }
 
 main();
