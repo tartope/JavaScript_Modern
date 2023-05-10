@@ -36,6 +36,12 @@ const ex4 = () => {
     console.log(palindrome('robot'));
 }
 
+const ex5 = () => {
+    // TODO...
+    let str = "today this is a this is a this is a test.";
+    console.log(numberOfTimes(str));
+}
+
 //
 // Your functions here...
 //
@@ -83,14 +89,23 @@ const palindrome = (str)=>{
     }else{
         return false;
     }
-    
+}
+
+const numberOfTimes = str =>{
+    const splitStr = str.split(" ");
+    let countArr = [];
+    for(let num of splitStr){
+        if(num === "this") countArr.push(num);
+    }
+    return `this appears: ${countArr.length} times.`;
 }
 
 const main = async () => {
     // ex1();
     // ex2();
     // ex3();
-    ex4();
+    // ex4();
+    ex5();
 }
 
 main();
