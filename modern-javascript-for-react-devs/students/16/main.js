@@ -28,6 +28,14 @@ const ex3 = () => {
     console.log(interleave(array1, array2));
 }
 
+const ex4 = () => {
+    // TODO...
+    // console.log(palindrome('radar'));
+    // console.log(palindrome('month'));
+    // console.log(palindrome('mom'));
+    console.log(palindrome('robot'));
+}
+
 //
 // Your functions here...
 //
@@ -66,10 +74,23 @@ const interleave = (arr1, arr2)=>{
     return result;
 }
 
+const palindrome = (str)=>{
+    const splitStr = str.split("");
+    const reverseStr = splitStr.reverse();
+    const joinStr = reverseStr.join("");
+    if(str === joinStr){
+        return true;
+    }else{
+        return false;
+    }
+    
+}
+
 const main = async () => {
     // ex1();
     // ex2();
-    ex3();
+    // ex3();
+    ex4();
 }
 
 main();
