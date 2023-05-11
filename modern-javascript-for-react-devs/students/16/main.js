@@ -56,6 +56,13 @@ const ex7 = () => {
     console.log(sort(n));
 }
 
+const ex8 = () => {
+    // TODO...
+    // let words = "Count the words in this string";
+    let words = "Hi";
+    console.log(countWords(words));
+}
+
 //
 // Your functions here...
 //
@@ -136,6 +143,21 @@ const sort = arr =>{
     return arr;
 }
 
+const countWords = str =>{
+    //create a counter variable and set to zero
+    let counter = 0;
+    //turn string into an array separated by words
+    const strArray = str.split(" ");
+    //loop through string array
+    for(let i=0; i<strArray.length; i++){
+        //for each iteration add to the counter variable
+        counter++;
+    }
+
+    //return the counter variable
+    return counter;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -143,7 +165,8 @@ const main = async () => {
     // ex4();
     // ex5();
     // ex6();
-    ex7();
+    // ex7();
+    ex8();
 }
 
 main();
