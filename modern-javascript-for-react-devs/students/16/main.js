@@ -49,6 +49,13 @@ const ex6 = () => {
     console.log(longestString(array));
 }
 
+const ex7 = () => {
+    // TODO...
+    // let n = [1, 3, 6, 3, 6, 10];
+    let n = [10, 23, 6, 11, 61, 13];
+    console.log(sort(n));
+}
+
 //
 // Your functions here...
 //
@@ -115,13 +122,28 @@ const longestString = str =>{
     return result;
 }
 
+const sort = arr =>{
+    //loop through
+    for(let i=0; i<arr.length; i++){
+        for(let j=0; j<arr.length; j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
     // ex3();
     // ex4();
     // ex5();
-    ex6();
+    // ex6();
+    ex7();
 }
 
 main();
