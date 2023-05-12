@@ -63,6 +63,15 @@ const ex8 = () => {
     console.log(countWords(words));
 }
 
+const ex9 = () => {
+    // TODO...
+    // let a = "this counts the number of words that end in s";
+    // let a = "apples bananas oranges fruit vegetables tomatoes";
+    // let a = "s";
+    let a = "sss";
+    console.log(countS(a));
+}
+
 //
 // Your functions here...
 //
@@ -158,6 +167,24 @@ const countWords = str =>{
     return counter;
 }
 
+const countS = (str)=>{
+    //input: a sentence/string
+    //function: counts how many words end in "s"
+    //output: a number
+
+    //create a counter variable and set to zero
+    let counter = 0;
+    //turn string into an array separated by words
+    const strArray = str.split(" ");
+    //loop through string array
+    for(let i=0; i<strArray.length; i++){
+        //if last letter of each word is "s", increase the counter variable
+        if(strArray[i][strArray[i].length-1] === "s") counter++;
+    }
+    //return the counter variable
+    return counter;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -166,7 +193,8 @@ const main = async () => {
     // ex5();
     // ex6();
     // ex7();
-    ex8();
+    // ex8();
+    ex9();
 }
 
 main();
