@@ -184,8 +184,6 @@ const countS = (str)=>{
     //return the counter variable
     return counter;
 }
-// console.log(strArray[0][strArray[0].length-1])
-// str[i] === str[str.length-1-i]
 
 const main = async () => {
     // ex1();
