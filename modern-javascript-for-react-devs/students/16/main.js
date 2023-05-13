@@ -122,6 +122,33 @@ const ex13 = () => {
     console.log(totalAge(dict));
 }
 
+const ex14 = () => {
+    // TODO...
+    let customers = [{
+        name: 'ABC Inc',
+        credit: 100
+    }, {
+        name: 'ACME Corp',
+        credit: 200
+    }, {
+        name: 'IoT AG',
+        credit: 300
+    }];
+
+    // let customers = [{
+    //     name: 'ABC Inc',
+    //     credit: 200
+    // }, {
+    //     name: 'ACME Corp',
+    //     credit: 200
+    // }, {
+    //     name: 'IoT AG',
+    //     credit: 300
+    // }];
+
+    console.log(checkCredit(customers));
+}
+
 //
 // Your functions here...
 //
@@ -307,6 +334,13 @@ const totalAge = arr =>{
     return `The total age is: ${result}.`
 }
 
+const checkCredit = arr =>{
+    //find credit and compare to 200, then assgin to found variable
+    const found = arr.find(item => item.credit === 200)
+    //return found variable
+    return found;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -321,7 +355,8 @@ const main = async () => {
     // ex10a();
     // ex11();
     // ex12();
-    ex13();
+    // ex13();
+    ex14();
 }
 
 main();
