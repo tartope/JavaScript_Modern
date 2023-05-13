@@ -72,6 +72,14 @@ const ex9 = () => {
     console.log(countS(a));
 }
 
+const ex10 = () => {
+    // TODO...
+    var array = ["this", "is", "a", "test"];
+    // var array = ["thisisalsoatest"];
+    // var array = [];
+    console.log(countLetters(array));
+}
+
 //
 // Your functions here...
 //
@@ -185,6 +193,15 @@ const countS = (str)=>{
     return counter;
 }
 
+const countLetters = arr =>{
+    let counter = 0;
+    for(let word of arr){
+        const wordLen = word.length;
+        counter += wordLen;
+    }
+    return counter;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -194,7 +211,8 @@ const main = async () => {
     // ex6();
     // ex7();
     // ex8();
-    ex9();
+    // ex9();
+    ex10();
 }
 
 main();
