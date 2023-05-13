@@ -95,6 +95,16 @@ const ex11 = () => {
     console.log(numbersOnly(arr));
 }
 
+const ex12 = () => {
+    // TODO...
+    const c = new Calculator();
+    c.add(1,2);
+    // console.log(c.sub(4,1));
+    // console.log(c.div(10,2));
+    // console.log(c.mul(2,2))
+    // console.log(c.getHistory())
+}
+
 //
 // Your functions here...
 //
@@ -234,6 +244,38 @@ const numbersOnly = arr =>{
     return numArr;
 }
 
+class Calculator{
+    // constructor(a,b){
+    //     this.a = a;
+    //     this.b = b;
+    // }
+
+    add(a,b){
+        const sum = a + b;
+        return `Add: ${a} + ${b} = ${sum}`;
+    }
+
+    sub(a,b){
+        const result = a - b;
+        return `Sub: ${a} - ${b} = ${result}`;
+    }
+
+    div(a,b){
+        const result = a / b;
+        return `Div: ${a} / ${b} = ${result}`;
+    }
+
+    mul(a,b){
+        const result = a * b;
+        return `Mul: ${a} * ${b} = ${result}`;
+    }
+
+    getHistory(){
+        const addHistory = this.add(a,b);
+        return addHistory;
+    }
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -246,7 +288,8 @@ const main = async () => {
     // ex9();
     // ex10();
     // ex10a();
-    ex11();
+    // ex11();
+    ex12();
 }
 
 main();
