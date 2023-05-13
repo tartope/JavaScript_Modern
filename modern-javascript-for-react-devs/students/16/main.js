@@ -80,6 +80,14 @@ const ex10 = () => {
     console.log(countLetters(array));
 }
 
+const ex10a = () => {
+    // TODO...
+    var array = ["this", "is", "a", "test"];
+    // var array = ["thisisalsoatest"];
+    // var array = [];
+    console.log(countLetters(array));
+}
+
 //
 // Your functions here...
 //
@@ -202,6 +210,15 @@ const countLetters = arr =>{
     return counter;
 }
 
+const countLettersMap = (arr)=>{
+    let counter = 0;
+    arr.map(word => {
+        const wordLen = word.length;
+        counter += wordLen;
+    })
+    return counter;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -212,7 +229,8 @@ const main = async () => {
     // ex7();
     // ex8();
     // ex9();
-    ex10();
+    // ex10();
+    ex10a();
 }
 
 main();
