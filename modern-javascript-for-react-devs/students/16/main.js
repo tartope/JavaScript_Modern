@@ -88,6 +88,13 @@ const ex10a = () => {
     console.log(countLetters(array));
 }
 
+const ex11 = () => {
+    // TODO...
+    // let arr = ['dog', 3, 7, 'cat', 13, 'car'];
+    let arr = [true, 300, -7, 'cat', 13.345, 'car'];
+    console.log(numbersOnly(arr));
+}
+
 //
 // Your functions here...
 //
@@ -219,6 +226,14 @@ const countLettersMap = (arr)=>{
     return counter;
 }
 
+const numbersOnly = arr =>{
+    const numArr = [];
+    for(let i=0; i<arr.length; i++){
+        if(typeof(arr[i]) === "number") numArr.push(arr[i]);
+    }
+    return numArr;
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -230,7 +245,8 @@ const main = async () => {
     // ex8();
     // ex9();
     // ex10();
-    ex10a();
+    // ex10a();
+    ex11();
 }
 
 main();
