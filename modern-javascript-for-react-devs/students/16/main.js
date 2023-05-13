@@ -105,6 +105,23 @@ const ex12 = () => {
     // console.log(c.getHistory())
 }
 
+const ex13 = () => {
+    // TODO...
+    // let dict = [
+    //     { "firstName": "joe", "lastName": "smith", age: 10 },
+    //     { "firstName": "paul", "lastName": "simmon", age: 20 },
+    //     { "firstName": "fred", "lastName": "jones", age: 30 },
+    // ]
+    
+    let dict = [
+        { "firstName": "joe", "lastName": "smith", age: 100 },
+        { "firstName": "paul", "lastName": "simmon", age: 2 },
+        { "firstName": "fred", "lastName": "jones", age: 30.5 },
+    ]
+
+    console.log(totalAge(dict));
+}
+
 //
 // Your functions here...
 //
@@ -276,6 +293,20 @@ class Calculator{
     }
 }
 
+const totalAge = arr =>{
+    //make result variable to return and set to zero
+    let result = 0;
+    //loop through the array
+    for(let person of arr){
+        //grab each person's age and set to a variable called age
+        const age = person.age;
+        //add each persons age to the result variable
+        result += age;
+    }
+    //return result with statement
+    return `The total age is: ${result}.`
+}
+
 const main = async () => {
     // ex1();
     // ex2();
@@ -289,7 +320,8 @@ const main = async () => {
     // ex10();
     // ex10a();
     // ex11();
-    ex12();
+    // ex12();
+    ex13();
 }
 
 main();
